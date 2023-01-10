@@ -21,4 +21,8 @@ export class EnvironmentService {
   get isProd(): boolean {
     return this.configService.getOrThrow('NODE_ENV') === 'production';
   }
+
+  get isTest(): boolean {
+    return this.configService.getOrThrow('NODE_ENV') === 'test';
+  }
 }
